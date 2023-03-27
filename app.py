@@ -131,7 +131,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def index():
-	return render_template("index.html", data=grouped_big_data)
+	return render_template("index.html", data=grouped_big_data.values())
 
 @app.route('/update', methods=['POST', 'GET'])
 def update():
