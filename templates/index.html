@@ -10,6 +10,14 @@
 </head>
 
 <body>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">FLIGHT ADVISOR</h1>
+        <div class="middle-background">
+            <img src="/static/assets/plane_background.svg">
+                
+            </img>
+        </div>
+    </div>
     <div>
         <form>
             <div class="flex">
@@ -29,6 +37,17 @@
                 </div>
             </div>
         </form>
+
+        <div><!-- 
+            {%for ticket in data%}
+            <ul>
+                {%for flight in ticket%}
+                <li>{{"%s | %s |$%s | %s -> %s | %s | %s" % (flight['flightNumber'], flight['ticketNumber'], flight['Price'], flight['Origin'], flight['Dest'], flight['IATA_Code_Operating_Airlin'], flight['predicted_Delayed'])}}</li>
+                {%endfor%}
+
+            </ul>
+            {%endfor%} -->
+        </div>
         
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
