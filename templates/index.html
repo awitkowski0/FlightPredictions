@@ -38,8 +38,26 @@
             </div>
         </form>
 
+        <form action="/update/" method="post" style="background-color: bisque;">
+            <input list="origins" name="origins" id="origin-search">
+            <datalist id="origins">
+                {%for origin in drop_down_data%}
+                <option>{{origin}}</option>
+                {%endfor%}
+            </datalist>
+            <input list="destinations" name="destinations" id="dest-search">
+            <datalist id="destinations">
+                {%for dest in drop_down_data%}
+                <option>{{dest}}</option>
+                {%endfor%}
+            </datalist>
+            <input type="date" id="flight-date" name="flight-date">
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+            <input type="submit" id="search-button">
+        </form>
+
         <div>
-            {%for ticket in data%}
+            {%for ticket in ticket_data%}
             <ul>
                 {%for flight in ticket%}
                 <li>{{"%s | %s |$%s | %s -> %s | %s | %s" % (flight['flightNumber'], flight['ticketNumber'], flight['Price'], flight['Origin'], flight['Dest'], flight['IATA_Code_Operating_Airline'], flight['predicted_Delayed'])}}</li>

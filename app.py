@@ -46,6 +46,22 @@ values = values[:-1]
 
 
 f.close()
+
+f = open('airport_codes_and_cities.json')
+  
+# returns JSON object as 
+# a dictionary
+drop_down_data_raw = json.load(f)
+
+drop_down_data_fixed = []
+
+for airport in drop_down_data_raw:
+    fixed_data = "{city}, {full_state}, United States | {airport_code}".format(city=airport['DestCityName'].split(',')[0], full_state=airport['DestStateName'], airport_code=airport['Dest'])
+    drop_down_data_fixed.append(fixed_data)
+
+
+f.close()
+
 client = bigquery.Client(project = "flightadvisor-379602")  # Setting client to correct projectID
 
 CREATE_TABLE_QUERY = (
@@ -121,24 +137,22 @@ grouped_big_data = defaultdict(list)
 for flight in big_data:
     grouped_big_data[flight['ticketNumber']].append(flight)
 
-# for ticket in grouped_big_data:       
-#   for flight in ticket:
-#                 print("%s | %s |$%s | %s -> %s | %s | %s" % (flight['flightNumber'], flight['ticketNumber'], flight['Price'], flight['Origin'], flight['Dest'], flight['IATA_Code_Operating_Airlin'], flight['predicted_Delayed']))
-
 app = Flask(__name__)
 
 
 @app.route("/")
 @app.route("/index")
 def index():
-	return render_template("index.html", data=grouped_big_data.values())
+	return render_template("index.html", ticket_data=grouped_big_data.values(), drop_down_data=drop_down_data_fixed)
 
-@app.route('/update', methods=['POST', 'GET'])
+@app.route('/update/', methods=['POST', 'GET'])
 def update():
-    airline = ""
-    date = ""
-    price = ""
-    delay = ""
+    print(request.form['origins'])
+    # print(request.form['origins'])
+    # date = ""
+    # price = ""
+    # delay = ""
+    return render_template("index.html", ticket_data=grouped_big_data.values(), drop_down_data=drop_down_data_fixed)
 
 
 if __name__ == '__main__':

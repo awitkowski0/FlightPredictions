@@ -1,0 +1,1493 @@
+[{
+  "Dest": "CLT",
+  "DestCityName": "Charlotte, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "ORD",
+  "DestCityName": "Chicago, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "BNA",
+  "DestCityName": "Nashville, TN",
+  "DestStateName": "Tennessee"
+}, {
+  "Dest": "BWI",
+  "DestCityName": "Baltimore, MD",
+  "DestStateName": "Maryland"
+}, {
+  "Dest": "LAS",
+  "DestCityName": "Las Vegas, NV",
+  "DestStateName": "Nevada"
+}, {
+  "Dest": "MCO",
+  "DestCityName": "Orlando, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "SEA",
+  "DestCityName": "Seattle, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "MSP",
+  "DestCityName": "Minneapolis, MN",
+  "DestStateName": "Minnesota"
+}, {
+  "Dest": "SFO",
+  "DestCityName": "San Francisco, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "IAH",
+  "DestCityName": "Houston, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "BOS",
+  "DestCityName": "Boston, MA",
+  "DestStateName": "Massachusetts"
+}, {
+  "Dest": "SAV",
+  "DestCityName": "Savannah, GA",
+  "DestStateName": "Georgia"
+}, {
+  "Dest": "PLN",
+  "DestCityName": "Pellston, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "VPS",
+  "DestCityName": "Valparaiso, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "PHF",
+  "DestCityName": "Newport News/Williamsburg, VA",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "ELP",
+  "DestCityName": "El Paso, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "BTR",
+  "DestCityName": "Baton Rouge, LA",
+  "DestStateName": "Louisiana"
+}, {
+  "Dest": "BTV",
+  "DestCityName": "Burlington, VT",
+  "DestStateName": "Vermont"
+}, {
+  "Dest": "BUR",
+  "DestCityName": "Burbank, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "MLB",
+  "DestCityName": "Melbourne, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "HDN",
+  "DestCityName": "Hayden, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "COS",
+  "DestCityName": "Colorado Springs, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "PNS",
+  "DestCityName": "Pensacola, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "SRQ",
+  "DestCityName": "Sarasota/Bradenton, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "ABQ",
+  "DestCityName": "Albuquerque, NM",
+  "DestStateName": "New Mexico"
+}, {
+  "Dest": "DSM",
+  "DestCityName": "Des Moines, IA",
+  "DestStateName": "Iowa"
+}, {
+  "Dest": "HSV",
+  "DestCityName": "Huntsville, AL",
+  "DestStateName": "Alabama"
+}, {
+  "Dest": "MEM",
+  "DestCityName": "Memphis, TN",
+  "DestStateName": "Tennessee"
+}, {
+  "Dest": "AVL",
+  "DestCityName": "Asheville, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "ECP",
+  "DestCityName": "Panama City, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "MGM",
+  "DestCityName": "Montgomery, AL",
+  "DestStateName": "Alabama"
+}, {
+  "Dest": "EUG",
+  "DestCityName": "Eugene, OR",
+  "DestStateName": "Oregon"
+}, {
+  "Dest": "RAP",
+  "DestCityName": "Rapid City, SD",
+  "DestStateName": "South Dakota"
+}, {
+  "Dest": "BIL",
+  "DestCityName": "Billings, MT",
+  "DestStateName": "Montana"
+}, {
+  "Dest": "GJT",
+  "DestCityName": "Grand Junction, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "PSC",
+  "DestCityName": "Pasco/Kennewick/Richland, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "MSO",
+  "DestCityName": "Missoula, MT",
+  "DestStateName": "Montana"
+}, {
+  "Dest": "IDA",
+  "DestCityName": "Idaho Falls, ID",
+  "DestStateName": "Idaho"
+}, {
+  "Dest": "PSP",
+  "DestCityName": "Palm Springs, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "YAK",
+  "DestCityName": "Yakutat, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "PAH",
+  "DestCityName": "Paducah, KY",
+  "DestStateName": "Kentucky"
+}, {
+  "Dest": "PGV",
+  "DestCityName": "Greenville, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "ERI",
+  "DestCityName": "Erie, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "LYH",
+  "DestCityName": "Lynchburg, VA",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "ITH",
+  "DestCityName": "Ithaca/Cortland, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "HTS",
+  "DestCityName": "Ashland, WV",
+  "DestStateName": "West Virginia"
+}, {
+  "Dest": "CRP",
+  "DestCityName": "Corpus Christi, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "BOI",
+  "DestCityName": "Boise, ID",
+  "DestStateName": "Idaho"
+}, {
+  "Dest": "DIK",
+  "DestCityName": "Dickinson, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "CPR",
+  "DestCityName": "Casper, WY",
+  "DestStateName": "Wyoming"
+}, {
+  "Dest": "MRY",
+  "DestCityName": "Monterey, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "ACV",
+  "DestCityName": "Arcata/Eureka, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "MFR",
+  "DestCityName": "Medford, OR",
+  "DestStateName": "Oregon"
+}, {
+  "Dest": "HYS",
+  "DestCityName": "Hays, KS",
+  "DestStateName": "Kansas"
+}, {
+  "Dest": "TXK",
+  "DestCityName": "Texarkana, AR",
+  "DestStateName": "Arkansas"
+}, {
+  "Dest": "LAW",
+  "DestCityName": "Lawton/Fort Sill, OK",
+  "DestStateName": "Oklahoma"
+}, {
+  "Dest": "ABI",
+  "DestCityName": "Abilene, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "JLN",
+  "DestCityName": "Joplin, MO",
+  "DestStateName": "Missouri"
+}, {
+  "Dest": "BRO",
+  "DestCityName": "Brownsville, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "ESC",
+  "DestCityName": "Escanaba, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "MBS",
+  "DestCityName": "Saginaw/Bay City/Midland, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "AZO",
+  "DestCityName": "Kalamazoo, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "BQN",
+  "DestCityName": "Aguadilla, PR",
+  "DestStateName": "Puerto Rico"
+}, {
+  "Dest": "SPN",
+  "DestCityName": "Saipan, TT",
+  "DestStateName": "U.S. Pacific Trust Territories and Possessions"
+}, {
+  "Dest": "PPG",
+  "DestCityName": "Pago Pago, TT",
+  "DestStateName": "U.S. Pacific Trust Territories and Possessions"
+}, {
+  "Dest": "SHD",
+  "DestCityName": "Staunton, VA",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "KTN",
+  "DestCityName": "Ketchikan, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "PSG",
+  "DestCityName": "Petersburg, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "MMH",
+  "DestCityName": "Mammoth Lakes, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "ABR",
+  "DestCityName": "Aberdeen, SD",
+  "DestStateName": "South Dakota"
+}, {
+  "Dest": "BRD",
+  "DestCityName": "Brainerd, MN",
+  "DestStateName": "Minnesota"
+}, {
+  "Dest": "MKG",
+  "DestCityName": "Muskegon, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "EAU",
+  "DestCityName": "Eau Claire, WI",
+  "DestStateName": "Wisconsin"
+}, {
+  "Dest": "IPT",
+  "DestCityName": "Williamsport, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "ART",
+  "DestCityName": "Watertown, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "BRW",
+  "DestCityName": "Barrow, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "YKM",
+  "DestCityName": "Yakima, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "OWB",
+  "DestCityName": "Owensboro, KY",
+  "DestStateName": "Kentucky"
+}, {
+  "Dest": "PHL",
+  "DestCityName": "Philadelphia, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "DTW",
+  "DestCityName": "Detroit, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "DFW",
+  "DestCityName": "Dallas/Fort Worth, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "AUS",
+  "DestCityName": "Austin, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "DCA",
+  "DestCityName": "Washington, DC",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "TPA",
+  "DestCityName": "Tampa, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "RDU",
+  "DestCityName": "Raleigh/Durham, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "OME",
+  "DestCityName": "Nome, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "OTZ",
+  "DestCityName": "Kotzebue, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "ILM",
+  "DestCityName": "Wilmington, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "FWA",
+  "DestCityName": "Fort Wayne, IN",
+  "DestStateName": "Indiana"
+}, {
+  "Dest": "ISP",
+  "DestCityName": "Islip, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "EYW",
+  "DestCityName": "Key West, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "FAR",
+  "DestCityName": "Fargo, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "FAY",
+  "DestCityName": "Fayetteville, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "CAK",
+  "DestCityName": "Akron, OH",
+  "DestStateName": "Ohio"
+}, {
+  "Dest": "FCA",
+  "DestCityName": "Kalispell, MT",
+  "DestStateName": "Montana"
+}, {
+  "Dest": "JAC",
+  "DestCityName": "Jackson, WY",
+  "DestStateName": "Wyoming"
+}, {
+  "Dest": "ATW",
+  "DestCityName": "Appleton, WI",
+  "DestStateName": "Wisconsin"
+}, {
+  "Dest": "MSY",
+  "DestCityName": "New Orleans, LA",
+  "DestStateName": "Louisiana"
+}, {
+  "Dest": "CVG",
+  "DestCityName": "Cincinnati, OH",
+  "DestStateName": "Kentucky"
+}, {
+  "Dest": "GRR",
+  "DestCityName": "Grand Rapids, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "AGS",
+  "DestCityName": "Augusta, GA",
+  "DestStateName": "Georgia"
+}, {
+  "Dest": "LNK",
+  "DestCityName": "Lincoln, NE",
+  "DestStateName": "Nebraska"
+}, {
+  "Dest": "CHO",
+  "DestCityName": "Charlottesville, VA",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "PWM",
+  "DestCityName": "Portland, ME",
+  "DestStateName": "Maine"
+}, {
+  "Dest": "CID",
+  "DestCityName": "Cedar Rapids/Iowa City, IA",
+  "DestStateName": "Iowa"
+}, {
+  "Dest": "TTN",
+  "DestCityName": "Trenton, NJ",
+  "DestStateName": "New Jersey"
+}, {
+  "Dest": "TVC",
+  "DestCityName": "Traverse City, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "CMI",
+  "DestCityName": "Champaign/Urbana, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "FLO",
+  "DestCityName": "Florence, SC",
+  "DestStateName": "South Carolina"
+}, {
+  "Dest": "BFF",
+  "DestCityName": "Scottsbluff, NE",
+  "DestStateName": "Nebraska"
+}, {
+  "Dest": "SAF",
+  "DestCityName": "Santa Fe, NM",
+  "DestStateName": "New Mexico"
+}, {
+  "Dest": "CNY",
+  "DestCityName": "Moab, UT",
+  "DestStateName": "Utah"
+}, {
+  "Dest": "COD",
+  "DestCityName": "Cody, WY",
+  "DestStateName": "Wyoming"
+}, {
+  "Dest": "SBP",
+  "DestCityName": "San Luis Obispo, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "MTJ",
+  "DestCityName": "Montrose/Delta, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "EAR",
+  "DestCityName": "Kearney, NE",
+  "DestStateName": "Nebraska"
+}, {
+  "Dest": "RKS",
+  "DestCityName": "Rock Springs, WY",
+  "DestStateName": "Wyoming"
+}, {
+  "Dest": "PUB",
+  "DestCityName": "Pueblo, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "PIB",
+  "DestCityName": "Hattiesburg/Laurel, MS",
+  "DestStateName": "Mississippi"
+}, {
+  "Dest": "SPI",
+  "DestCityName": "Springfield, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "SPS",
+  "DestCityName": "Wichita Falls, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "DRT",
+  "DestCityName": "Del Rio, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "MFE",
+  "DestCityName": "Mission/McAllen/Edinburg, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "ROW",
+  "DestCityName": "Roswell, NM",
+  "DestStateName": "New Mexico"
+}, {
+  "Dest": "CIU",
+  "DestCityName": "Sault Ste. Marie, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "ELM",
+  "DestCityName": "Elmira/Corning, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "SCE",
+  "DestCityName": "State College, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "PQI",
+  "DestCityName": "Presque Isle/Houlton, ME",
+  "DestStateName": "Maine"
+}, {
+  "Dest": "BLV",
+  "DestCityName": "Belleville, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "IAG",
+  "DestCityName": "Niagara Falls, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "LWB",
+  "DestCityName": "Lewisburg, WV",
+  "DestStateName": "West Virginia"
+}, {
+  "Dest": "GST",
+  "DestCityName": "Gustavus, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "WRG",
+  "DestCityName": "Wrangell, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "SMX",
+  "DestCityName": "Santa Maria, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "RDD",
+  "DestCityName": "Redding, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "PSM",
+  "DestCityName": "Portsmouth, NH",
+  "DestStateName": "New Hampshire"
+}, {
+  "Dest": "INL",
+  "DestCityName": "International Falls, MN",
+  "DestStateName": "Minnesota"
+}, {
+  "Dest": "BJI",
+  "DestCityName": "Bemidji, MN",
+  "DestStateName": "Minnesota"
+}, {
+  "Dest": "RHI",
+  "DestCityName": "Rhinelander, WI",
+  "DestStateName": "Wisconsin"
+}, {
+  "Dest": "UIN",
+  "DestCityName": "Quincy, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "EAT",
+  "DestCityName": "Wenatchee, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "PUW",
+  "DestCityName": "Pullman, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "LWS",
+  "DestCityName": "Lewiston, ID",
+  "DestStateName": "Idaho"
+}, {
+  "Dest": "CDC",
+  "DestCityName": "Cedar City, UT",
+  "DestStateName": "Utah"
+}, {
+  "Dest": "PGD",
+  "DestCityName": "Punta Gorda, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "PHX",
+  "DestCityName": "Phoenix, AZ",
+  "DestStateName": "Arizona"
+}, {
+  "Dest": "SAN",
+  "DestCityName": "San Diego, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "PDX",
+  "DestCityName": "Portland, OR",
+  "DestStateName": "Oregon"
+}, {
+  "Dest": "PBI",
+  "DestCityName": "West Palm Beach/Palm Beach, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "DLG",
+  "DestCityName": "Dillingham, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "DUT",
+  "DestCityName": "Unalaska, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "KOA",
+  "DestCityName": "Kona, HI",
+  "DestStateName": "Hawaii"
+}, {
+  "Dest": "TUL",
+  "DestCityName": "Tulsa, OK",
+  "DestStateName": "Oklahoma"
+}, {
+  "Dest": "PIA",
+  "DestCityName": "Peoria, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "BDL",
+  "DestCityName": "Hartford, CT",
+  "DestStateName": "Connecticut"
+}, {
+  "Dest": "PIT",
+  "DestCityName": "Pittsburgh, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "MLI",
+  "DestCityName": "Moline, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "CMH",
+  "DestCityName": "Columbus, OH",
+  "DestStateName": "Ohio"
+}, {
+  "Dest": "ONT",
+  "DestCityName": "Ontario, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "SAT",
+  "DestCityName": "San Antonio, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "EVV",
+  "DestCityName": "Evansville, IN",
+  "DestStateName": "Indiana"
+}, {
+  "Dest": "BZN",
+  "DestCityName": "Bozeman, MT",
+  "DestStateName": "Montana"
+}, {
+  "Dest": "EWN",
+  "DestCityName": "New Bern/Morehead/Beaufort, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "BHM",
+  "DestCityName": "Birmingham, AL",
+  "DestStateName": "Alabama"
+}, {
+  "Dest": "SBN",
+  "DestCityName": "South Bend, IN",
+  "DestStateName": "Indiana"
+}, {
+  "Dest": "MOB",
+  "DestCityName": "Mobile, AL",
+  "DestStateName": "Alabama"
+}, {
+  "Dest": "ASE",
+  "DestCityName": "Aspen, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "LEX",
+  "DestCityName": "Lexington, KY",
+  "DestStateName": "Kentucky"
+}, {
+  "Dest": "LFT",
+  "DestCityName": "Lafayette, LA",
+  "DestStateName": "Louisiana"
+}, {
+  "Dest": "JAN",
+  "DestCityName": "Jackson/Vicksburg, MS",
+  "DestStateName": "Mississippi"
+}, {
+  "Dest": "STL",
+  "DestCityName": "St. Louis, MO",
+  "DestStateName": "Missouri"
+}, {
+  "Dest": "MDT",
+  "DestCityName": "Harrisburg, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "GNV",
+  "DestCityName": "Gainesville, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "RIC",
+  "DestCityName": "Richmond, VA",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "AVP",
+  "DestCityName": "Scranton/Wilkes-Barre, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "AEX",
+  "DestCityName": "Alexandria, LA",
+  "DestStateName": "Louisiana"
+}, {
+  "Dest": "TRI",
+  "DestCityName": "Bristol/Johnson City/Kingsport, TN",
+  "DestStateName": "Tennessee"
+}, {
+  "Dest": "RNO",
+  "DestCityName": "Reno, NV",
+  "DestStateName": "Nevada"
+}, {
+  "Dest": "MHT",
+  "DestCityName": "Manchester, NH",
+  "DestStateName": "New Hampshire"
+}, {
+  "Dest": "DAB",
+  "DestCityName": "Daytona Beach, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "MIA",
+  "DestCityName": "Miami, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "AZA",
+  "DestCityName": "Phoenix, AZ",
+  "DestStateName": "Arizona"
+}, {
+  "Dest": "PIR",
+  "DestCityName": "Pierre, SD",
+  "DestStateName": "South Dakota"
+}, {
+  "Dest": "OGD",
+  "DestCityName": "Ogden, UT",
+  "DestStateName": "Utah"
+}, {
+  "Dest": "BLI",
+  "DestCityName": "Bellingham, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "GRI",
+  "DestCityName": "Grand Island, NE",
+  "DestStateName": "Nebraska"
+}, {
+  "Dest": "GEG",
+  "DestCityName": "Spokane, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "SBY",
+  "DestCityName": "Salisbury, MD",
+  "DestStateName": "Maryland"
+}, {
+  "Dest": "HVN",
+  "DestCityName": "New Haven, CT",
+  "DestStateName": "Connecticut"
+}, {
+  "Dest": "BFM",
+  "DestCityName": "Mobile, AL",
+  "DestStateName": "Alabama"
+}, {
+  "Dest": "LBF",
+  "DestCityName": "North Platte, NE",
+  "DestStateName": "Nebraska"
+}, {
+  "Dest": "ISN",
+  "DestCityName": "Williston, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "FAT",
+  "DestCityName": "Fresno, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "BKG",
+  "DestCityName": "Branson, MO",
+  "DestStateName": "Missouri"
+}, {
+  "Dest": "DRO",
+  "DestCityName": "Durango, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "ATY",
+  "DestCityName": "Watertown, SD",
+  "DestStateName": "South Dakota"
+}, {
+  "Dest": "STS",
+  "DestCityName": "Santa Rosa, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "SUN",
+  "DestCityName": "Sun Valley/Hailey/Ketchum, ID",
+  "DestStateName": "Idaho"
+}, {
+  "Dest": "VEL",
+  "DestCityName": "Vernal, UT",
+  "DestStateName": "Utah"
+}, {
+  "Dest": "XWA",
+  "DestCityName": "Williston, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "GUC",
+  "DestCityName": "Gunnison, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "CLL",
+  "DestCityName": "College Station/Bryan, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "GCK",
+  "DestCityName": "Garden City, KS",
+  "DestStateName": "Kansas"
+}, {
+  "Dest": "GGG",
+  "DestCityName": "Longview, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "SUX",
+  "DestCityName": "Sioux City, IA",
+  "DestStateName": "Iowa"
+}, {
+  "Dest": "GRK",
+  "DestCityName": "Killeen, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "BPT",
+  "DestCityName": "Beaumont/Port Arthur, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "SJT",
+  "DestCityName": "San Angelo, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "LSE",
+  "DestCityName": "La Crosse, WI",
+  "DestStateName": "Wisconsin"
+}, {
+  "Dest": "MQT",
+  "DestCityName": "Marquette, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "SWF",
+  "DestCityName": "Newburgh/Poughkeepsie, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "USA",
+  "DestCityName": "CONCORD, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "PBG",
+  "DestCityName": "Plattsburgh, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "JHM",
+  "DestCityName": "Kapalua, HI",
+  "DestStateName": "Hawaii"
+}, {
+  "Dest": "LNY",
+  "DestCityName": "Lanai, HI",
+  "DestStateName": "Hawaii"
+}, {
+  "Dest": "GUM",
+  "DestCityName": "Guam, TT",
+  "DestStateName": "U.S. Pacific Trust Territories and Possessions"
+}, {
+  "Dest": "OGS",
+  "DestCityName": "Ogdensburg, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "CKB",
+  "DestCityName": "Clarksburg/Fairmont, WV",
+  "DestStateName": "West Virginia"
+}, {
+  "Dest": "PSE",
+  "DestCityName": "Ponce, PR",
+  "DestStateName": "Puerto Rico"
+}, {
+  "Dest": "SIT",
+  "DestCityName": "Sitka, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "DLH",
+  "DestCityName": "Duluth, MN",
+  "DestStateName": "Minnesota"
+}, {
+  "Dest": "HGR",
+  "DestCityName": "Hagerstown, MD",
+  "DestStateName": "Maryland"
+}, {
+  "Dest": "DBQ",
+  "DestCityName": "Dubuque, IA",
+  "DestStateName": "Iowa"
+}, {
+  "Dest": "CMX",
+  "DestCityName": "Hancock/Houghton, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "ALW",
+  "DestCityName": "Walla Walla, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "OTH",
+  "DestCityName": "North Bend/Coos Bay, OR",
+  "DestStateName": "Oregon"
+}, {
+  "Dest": "EKO",
+  "DestCityName": "Elko, NV",
+  "DestStateName": "Nevada"
+}, {
+  "Dest": "BTM",
+  "DestCityName": "Butte, MT",
+  "DestStateName": "Montana"
+}, {
+  "Dest": "ATL",
+  "DestCityName": "Atlanta, GA",
+  "DestStateName": "Georgia"
+}, {
+  "Dest": "SFB",
+  "DestCityName": "Sanford, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "SLC",
+  "DestCityName": "Salt Lake City, UT",
+  "DestStateName": "Utah"
+}, {
+  "Dest": "DEN",
+  "DestCityName": "Denver, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "HOU",
+  "DestCityName": "Houston, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "JFK",
+  "DestCityName": "New York, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "OAK",
+  "DestCityName": "Oakland, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "SJC",
+  "DestCityName": "San Jose, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "DAL",
+  "DestCityName": "Dallas, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "LGA",
+  "DestCityName": "New York, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "RSW",
+  "DestCityName": "Fort Myers, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "AKN",
+  "DestCityName": "King Salmon, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "FAI",
+  "DestCityName": "Fairbanks, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "CDV",
+  "DestCityName": "Cordova, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "ADK",
+  "DestCityName": "Adak Island, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "ALB",
+  "DestCityName": "Albany, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "OKC",
+  "DestCityName": "Oklahoma City, OK",
+  "DestStateName": "Oklahoma"
+}, {
+  "Dest": "RST",
+  "DestCityName": "Rochester, MN",
+  "DestStateName": "Minnesota"
+}, {
+  "Dest": "SMF",
+  "DestCityName": "Sacramento, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "XNA",
+  "DestCityName": "Fayetteville, AR",
+  "DestStateName": "Arkansas"
+}, {
+  "Dest": "HHH",
+  "DestCityName": "Hilton Head, SC",
+  "DestStateName": "South Carolina"
+}, {
+  "Dest": "ORF",
+  "DestCityName": "Norfolk, VA",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "CAE",
+  "DestCityName": "Columbia, SC",
+  "DestStateName": "South Carolina"
+}, {
+  "Dest": "SDF",
+  "DestCityName": "Louisville, KY",
+  "DestStateName": "Kentucky"
+}, {
+  "Dest": "CSG",
+  "DestCityName": "Columbus, GA",
+  "DestStateName": "Georgia"
+}, {
+  "Dest": "TLH",
+  "DestCityName": "Tallahassee, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "ABY",
+  "DestCityName": "Albany, GA",
+  "DestStateName": "Georgia"
+}, {
+  "Dest": "MSN",
+  "DestCityName": "Madison, WI",
+  "DestStateName": "Wisconsin"
+}, {
+  "Dest": "STT",
+  "DestCityName": "Charlotte Amalie, VI",
+  "DestStateName": "U.S. Virgin Islands"
+}, {
+  "Dest": "STX",
+  "DestCityName": "Christiansted, VI",
+  "DestStateName": "U.S. Virgin Islands"
+}, {
+  "Dest": "BMI",
+  "DestCityName": "Bloomington/Normal, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "SGF",
+  "DestCityName": "Springfield, MO",
+  "DestStateName": "Missouri"
+}, {
+  "Dest": "LIT",
+  "DestCityName": "Little Rock, AR",
+  "DestStateName": "Arkansas"
+}, {
+  "Dest": "FNT",
+  "DestCityName": "Flint, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "GSP",
+  "DestCityName": "Greer, SC",
+  "DestStateName": "South Carolina"
+}, {
+  "Dest": "OAJ",
+  "DestCityName": "Jacksonville/Camp Lejeune, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "PVD",
+  "DestCityName": "Providence, RI",
+  "DestStateName": "Rhode Island"
+}, {
+  "Dest": "CHA",
+  "DestCityName": "Chattanooga, TN",
+  "DestStateName": "Tennessee"
+}, {
+  "Dest": "EGE",
+  "DestCityName": "Eagle, CO",
+  "DestStateName": "Colorado"
+}, {
+  "Dest": "ROC",
+  "DestCityName": "Rochester, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "CHS",
+  "DestCityName": "Charleston, SC",
+  "DestStateName": "South Carolina"
+}, {
+  "Dest": "ICT",
+  "DestCityName": "Wichita, KS",
+  "DestStateName": "Kansas"
+}, {
+  "Dest": "FSD",
+  "DestCityName": "Sioux Falls, SD",
+  "DestStateName": "South Dakota"
+}, {
+  "Dest": "HRL",
+  "DestCityName": "Harlingen/San Benito, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "MOT",
+  "DestCityName": "Minot, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "GFK",
+  "DestCityName": "Grand Forks, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "SCK",
+  "DestCityName": "Stockton, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "BIS",
+  "DestCityName": "Bismarck/Mandan, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "STC",
+  "DestCityName": "St. Cloud, MN",
+  "DestStateName": "Minnesota"
+}, {
+  "Dest": "RFD",
+  "DestCityName": "Rockford, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "MVY",
+  "DestCityName": "Martha\u0027s Vineyard, MA",
+  "DestStateName": "Massachusetts"
+}, {
+  "Dest": "AMA",
+  "DestCityName": "Amarillo, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "MAF",
+  "DestCityName": "Midland/Odessa, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "LAN",
+  "DestCityName": "Lansing, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "BFL",
+  "DestCityName": "Bakersfield, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "LAR",
+  "DestCityName": "Laramie, WY",
+  "DestStateName": "Wyoming"
+}, {
+  "Dest": "HLN",
+  "DestCityName": "Helena, MT",
+  "DestStateName": "Montana"
+}, {
+  "Dest": "FLG",
+  "DestCityName": "Flagstaff, AZ",
+  "DestStateName": "Arizona"
+}, {
+  "Dest": "PAE",
+  "DestCityName": "Everett, WA",
+  "DestStateName": "Washington"
+}, {
+  "Dest": "LIH",
+  "DestCityName": "Lihue, HI",
+  "DestStateName": "Hawaii"
+}, {
+  "Dest": "SGU",
+  "DestCityName": "St. George, UT",
+  "DestStateName": "Utah"
+}, {
+  "Dest": "GTF",
+  "DestCityName": "Great Falls, MT",
+  "DestStateName": "Montana"
+}, {
+  "Dest": "YUM",
+  "DestCityName": "Yuma, AZ",
+  "DestStateName": "Arizona"
+}, {
+  "Dest": "MEI",
+  "DestCityName": "Meridian, MS",
+  "DestStateName": "Mississippi"
+}, {
+  "Dest": "SWO",
+  "DestCityName": "Stillwater, OK",
+  "DestStateName": "Oklahoma"
+}, {
+  "Dest": "IMT",
+  "DestCityName": "Iron Mountain/Kingsfd, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "ORH",
+  "DestCityName": "Worcester, MA",
+  "DestStateName": "Massachusetts"
+}, {
+  "Dest": "CWA",
+  "DestCityName": "Mosinee, WI",
+  "DestStateName": "Wisconsin"
+}, {
+  "Dest": "MKK",
+  "DestCityName": "Hoolehua, HI",
+  "DestStateName": "Hawaii"
+}, {
+  "Dest": "ITO",
+  "DestCityName": "Hilo, HI",
+  "DestStateName": "Hawaii"
+}, {
+  "Dest": "SLN",
+  "DestCityName": "Salina, KS",
+  "DestStateName": "Kansas"
+}, {
+  "Dest": "HYA",
+  "DestCityName": "Hyannis, MA",
+  "DestStateName": "Massachusetts"
+}, {
+  "Dest": "HIB",
+  "DestCityName": "Hibbing, MN",
+  "DestStateName": "Minnesota"
+}, {
+  "Dest": "ALO",
+  "DestCityName": "Waterloo, IA",
+  "DestStateName": "Iowa"
+}, {
+  "Dest": "CGI",
+  "DestCityName": "Cape Girardeau, MO",
+  "DestStateName": "Missouri"
+}, {
+  "Dest": "PIH",
+  "DestCityName": "Pocatello, ID",
+  "DestStateName": "Idaho"
+}, {
+  "Dest": "MYR",
+  "DestCityName": "Myrtle Beach, SC",
+  "DestStateName": "South Carolina"
+}, {
+  "Dest": "PIE",
+  "DestCityName": "St. Petersburg, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "FLL",
+  "DestCityName": "Fort Lauderdale, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "SNA",
+  "DestCityName": "Santa Ana, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "LAX",
+  "DestCityName": "Los Angeles, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "MCI",
+  "DestCityName": "Kansas City, MO",
+  "DestStateName": "Missouri"
+}, {
+  "Dest": "MDW",
+  "DestCityName": "Chicago, IL",
+  "DestStateName": "Illinois"
+}, {
+  "Dest": "EWR",
+  "DestCityName": "Newark, NJ",
+  "DestStateName": "New Jersey"
+}, {
+  "Dest": "HPN",
+  "DestCityName": "White Plains, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "ANC",
+  "DestCityName": "Anchorage, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "IAD",
+  "DestCityName": "Washington, DC",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "OGG",
+  "DestCityName": "Kahului, HI",
+  "DestStateName": "Hawaii"
+}, {
+  "Dest": "BET",
+  "DestCityName": "Bethel, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "SCC",
+  "DestCityName": "Deadhorse, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "HNL",
+  "DestCityName": "Honolulu, HI",
+  "DestStateName": "Hawaii"
+}, {
+  "Dest": "ADQ",
+  "DestCityName": "Kodiak, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "JNU",
+  "DestCityName": "Juneau, AK",
+  "DestStateName": "Alaska"
+}, {
+  "Dest": "FSM",
+  "DestCityName": "Fort Smith, AR",
+  "DestStateName": "Arkansas"
+}, {
+  "Dest": "DAY",
+  "DestCityName": "Dayton, OH",
+  "DestStateName": "Ohio"
+}, {
+  "Dest": "TUS",
+  "DestCityName": "Tucson, AZ",
+  "DestStateName": "Arizona"
+}, {
+  "Dest": "MKE",
+  "DestCityName": "Milwaukee, WI",
+  "DestStateName": "Wisconsin"
+}, {
+  "Dest": "CLE",
+  "DestCityName": "Cleveland, OH",
+  "DestStateName": "Ohio"
+}, {
+  "Dest": "BUF",
+  "DestCityName": "Buffalo, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "DHN",
+  "DestCityName": "Dothan, AL",
+  "DestStateName": "Alabama"
+}, {
+  "Dest": "OMA",
+  "DestCityName": "Omaha, NE",
+  "DestStateName": "Nebraska"
+}, {
+  "Dest": "IND",
+  "DestCityName": "Indianapolis, IN",
+  "DestStateName": "Indiana"
+}, {
+  "Dest": "TYS",
+  "DestCityName": "Knoxville, TN",
+  "DestStateName": "Tennessee"
+}, {
+  "Dest": "MLU",
+  "DestCityName": "Monroe, LA",
+  "DestStateName": "Louisiana"
+}, {
+  "Dest": "CRW",
+  "DestCityName": "Charleston/Dunbar, WV",
+  "DestStateName": "West Virginia"
+}, {
+  "Dest": "ABE",
+  "DestCityName": "Allentown/Bethlehem/Easton, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "JAX",
+  "DestCityName": "Jacksonville, FL",
+  "DestStateName": "Florida"
+}, {
+  "Dest": "ACY",
+  "DestCityName": "Atlantic City, NJ",
+  "DestStateName": "New Jersey"
+}, {
+  "Dest": "GPT",
+  "DestCityName": "Gulfport/Biloxi, MS",
+  "DestStateName": "Mississippi"
+}, {
+  "Dest": "GRB",
+  "DestCityName": "Green Bay, WI",
+  "DestStateName": "Wisconsin"
+}, {
+  "Dest": "GSO",
+  "DestCityName": "Greensboro/High Point, NC",
+  "DestStateName": "North Carolina"
+}, {
+  "Dest": "SHV",
+  "DestCityName": "Shreveport, LA",
+  "DestStateName": "Louisiana"
+}, {
+  "Dest": "GTR",
+  "DestCityName": "Columbus, MS",
+  "DestStateName": "Mississippi"
+}, {
+  "Dest": "BQK",
+  "DestCityName": "Brunswick, GA",
+  "DestStateName": "Georgia"
+}, {
+  "Dest": "ROA",
+  "DestCityName": "Roanoke, VA",
+  "DestStateName": "Virginia"
+}, {
+  "Dest": "VLD",
+  "DestCityName": "Valdosta, GA",
+  "DestStateName": "Georgia"
+}, {
+  "Dest": "SYR",
+  "DestCityName": "Syracuse, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "SJU",
+  "DestCityName": "San Juan, PR",
+  "DestStateName": "Puerto Rico"
+}, {
+  "Dest": "LBB",
+  "DestCityName": "Lubbock, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "LGB",
+  "DestCityName": "Long Beach, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "PVU",
+  "DestCityName": "Provo, UT",
+  "DestStateName": "Utah"
+}, {
+  "Dest": "ACK",
+  "DestCityName": "Nantucket, MA",
+  "DestStateName": "Massachusetts"
+}, {
+  "Dest": "LCK",
+  "DestCityName": "Columbus, OH",
+  "DestStateName": "Ohio"
+}, {
+  "Dest": "BGR",
+  "DestCityName": "Bangor, ME",
+  "DestStateName": "Maine"
+}, {
+  "Dest": "TOL",
+  "DestCityName": "Toledo, OH",
+  "DestStateName": "Ohio"
+}, {
+  "Dest": "TYR",
+  "DestCityName": "Tyler, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "GCC",
+  "DestCityName": "Gillette, WY",
+  "DestStateName": "Wyoming"
+}, {
+  "Dest": "SBA",
+  "DestCityName": "Santa Barbara, CA",
+  "DestStateName": "California"
+}, {
+  "Dest": "LBL",
+  "DestCityName": "Liberal, KS",
+  "DestStateName": "Kansas"
+}, {
+  "Dest": "COU",
+  "DestCityName": "Columbia, MO",
+  "DestStateName": "Missouri"
+}, {
+  "Dest": "HOB",
+  "DestCityName": "Hobbs, NM",
+  "DestStateName": "New Mexico"
+}, {
+  "Dest": "RDM",
+  "DestCityName": "Bend/Redmond, OR",
+  "DestStateName": "Oregon"
+}, {
+  "Dest": "PRC",
+  "DestCityName": "Prescott, AZ",
+  "DestStateName": "Arizona"
+}, {
+  "Dest": "JMS",
+  "DestCityName": "Jamestown, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "LRD",
+  "DestCityName": "Laredo, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "LCH",
+  "DestCityName": "Lake Charles, LA",
+  "DestStateName": "Louisiana"
+}, {
+  "Dest": "ACT",
+  "DestCityName": "Waco, TX",
+  "DestStateName": "Texas"
+}, {
+  "Dest": "CYS",
+  "DestCityName": "Cheyenne, WY",
+  "DestStateName": "Wyoming"
+}, {
+  "Dest": "MHK",
+  "DestCityName": "Manhattan/Ft. Riley, KS",
+  "DestStateName": "Kansas"
+}, {
+  "Dest": "BGM",
+  "DestCityName": "Binghamton, NY",
+  "DestStateName": "New York"
+}, {
+  "Dest": "APN",
+  "DestCityName": "Alpena, MI",
+  "DestStateName": "Michigan"
+}, {
+  "Dest": "LBE",
+  "DestCityName": "Latrobe, PA",
+  "DestStateName": "Pennsylvania"
+}, {
+  "Dest": "DVL",
+  "DestCityName": "Devils Lake, ND",
+  "DestStateName": "North Dakota"
+}, {
+  "Dest": "WYS",
+  "DestCityName": "West Yellowstone, MT",
+  "DestStateName": "Montana"
+}, {
+  "Dest": "TWF",
+  "DestCityName": "Twin Falls, ID",
+  "DestStateName": "Idaho"
+}]
