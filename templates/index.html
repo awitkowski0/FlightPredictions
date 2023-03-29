@@ -79,6 +79,7 @@
             </ul>
             {%endfor%}
         </div> -->
+    {% if ticket_data %}
     <div id = "tableContainer">
         <table>
             <thead>
@@ -109,6 +110,7 @@
             </tbody>
         </table>
     </div>
+    {% endif %}
 
         <!-- <div class="ticket">
             {% for ticket in ticket_data %}
