@@ -7,56 +7,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Advisor</title>
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">FLIGHT ADVISOR</h1>
-        <div class="middle-background">
-            <img src="/static/assets/plane_background.svg">
-                
-            </img>
-        </div>
-    </div>
-    <div>
-        <form>
-            <div class="flex">
-                <div class="relative w-full">
-                    <input type="search" id="location-search"
-                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
-                        placeholder="Where to?" required>
-                    <button type="submit"
-                        class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                        <span class="sr-only">Search</span>
-                    </button>
-                </div>
-            </div>
-        </form>
+<body>  
+    <!-- !!!!!ANIMATED CLOUDS!!!!!
+    <div id="clouds">
+    <div class="cloud x1"></div> 
+    Time for multiple clouds to dance around -->
+    <!-- <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+    </div> -->
 
-        <form action="/update/" method="post" style="background-color: bisque;">
-            <input list="origins" name="origins" id="origin-search">
+    <div id="titleContainer">
+        <img id = "logo" src="/static/assets/logo.svg">
+    </div> 
+
+    <div id = "inputContainer">
+        <!-- <form>
+            <div class="flex">
+                <input type="search" id="location-search"
+                    placeholder="Where to?" required>
+                <button type="submit">
+                    <svg aria-hidden="true" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </div>
+        </form> -->
+
+        <form action="/update/" method="post">
+            <input class = "inputs" list="origins" name="origins" placeholder = "Where from?" id="origin-search">
             <datalist id="origins">
                 {%for origin in drop_down_data%}
                 <option>{{origin}}</option>
                 {%endfor%}
             </datalist>
-            <input list="destinations" name="destinations" id="dest-search">
+            <input class = "inputs" list="destinations" name="destinations" placeholder="Where to?" id="dest-search"> 
             <datalist id="destinations">
                 {%for dest in drop_down_data%}
                 <option>{{dest}}</option>
                 {%endfor%}
             </datalist>
-            <input type="date" id="flight-date" name="flight-date">
-            <input type="number" id="quantity" name="quantity" min="1" max="5">
-            <input type="submit" id="search-button">
-        </form>
+                <input class="inputs" type="date" id="flight-date" name="flight-date">
+                <input class="inputs" type="number" placeholder="How many tickets?" id="quantity" name="quantity" min="1" max="5">
+                <button type="submit" id="search-button"><img src="/static/assets/button.jpg" alt="Search"></button>
 
-        <div>
+            <!-- <input class = "inputs" type="date" id="flight-date" name="flight-date">
+                <input class = "inputs" type="number" placeholder="How many tickets?"id="quantity" name="quantity" min="1" max="5">
+                <input class = "inputs" type="submit" id="search-button"> -->
+            </div>
+        </form> 
+          
+          <!-- <div>
             {%for ticket in ticket_data%}
             <ul>
                 {%for flight in ticket%}
@@ -65,10 +78,58 @@
 
             </ul>
             {%endfor%}
-        </div>
-        
+        </div> -->
+    <div id = "tableContainer">
+        <table>
+            <thead>
+              <tr>
+                <th id = "flightNumber">Flight Number</th>
+                <th>Ticket Number</th>
+                <th>Price</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Airline</th>
+                <th id = "delayed">Delayed</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for ticket in ticket_data %}
+                {% for flight in ticket %}
+                  <tr>
+                    <td>{{ flight['flightNumber'] }}</td>
+                    <td>{{ flight['ticketNumber'] }}</td>
+                    <td>{{ flight['Price'] }}</td>
+                    <td>{{ flight['Origin'] }}</td>
+                    <td>{{ flight['Dest'] }}</td>
+                    <td>{{ flight['IATA_Code_Operating_Airline'] }}</td>
+                    <td>{{ flight['predicted_Delayed'] }}</td>
+                  </tr>
+                {% endfor %}
+              {% endfor %}
+            </tbody>
+        </table>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
-</body>
 
+        <!-- <div class="ticket">
+            {% for ticket in ticket_data %}
+            <ul class="flight">
+              {% for flight in ticket %}
+              <li>
+                <strong>Flight Number:</strong> {{ flight['flightNumber'] }}<br>
+                <strong>Ticket Number:</strong> {{ flight['ticketNumber'] }}<br>
+                <strong>Price:</strong> ${{ flight['Price'] }}<br>
+                <strong>Origin:</strong> {{ flight['Origin'] }}<br>
+                <strong>Destination:</strong> {{ flight['Dest'] }}<br>
+                <strong>Operating Airline:</strong> {{ flight['IATA_Code_Operating_Airline'] }}<br>
+                <strong>Predicted Delay:</strong> {{ flight['predicted_Delayed'] }}
+              </li>
+              {% endfor %}
+            </ul>
+            {% endfor %}
+        </div> -->
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
+</body>
 </html>
