@@ -14,7 +14,8 @@ COPY . .
 
 RUN npm install --production
 
-RUN npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
+#not using tailwind right now, so dont run this to build the output.css
+#RUN npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
