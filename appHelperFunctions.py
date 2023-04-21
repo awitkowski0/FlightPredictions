@@ -5,6 +5,7 @@ from google.cloud import bigquery
 import json
 from datetime import datetime
 from collections import defaultdict
+import random
 
 def getTicketDataFromAPI(origin, dest, date, number_tickets):
     # amadeus = Client(client_id='GNEZjAg0tkEbPkWGGvvRteWxSBbSAXKU', client_secret='wYFTeSAIy0vAJIbq')
@@ -56,6 +57,14 @@ def getGroupedData(data):
     values = """"""
     flightNumber = 0
     ticketNumber = 0
+    f = open('airline_codes.json')
+
+    airline_codes = json.load(f)
+    airlines = {}
+
+    for airline in airline_codes:
+        airlines[airline['IATA_Code_Operating_Airline']] = airline['Airline']
+
     for flight_offer in flight_api_data:
         for segment in flight_offer['itineraries'][0]['segments']:
             depature_datetime = datetime.strptime(segment['departure']['at'], "%Y-%m-%dT%H:%M:%S")
@@ -67,16 +76,20 @@ def getGroupedData(data):
                             'DayOfWeek': depature_datetime.weekday(), 
                             'Origin': segment['departure']['iataCode'], 
                             'Dest': segment['arrival']['iataCode'], 
-                            'IATA_Code_Operating_Airline': segment['carrierCode']})
+                            'IATA_Code_Operating_Airline': segment['carrierCode'],
+                            'Airline': airlines[segment['carrierCode']]})
             values += "(%s, %s, %s, %s, %s, %s, \"%s\", \"%s\", \"%s\")," % (flightNumber, ticketNumber, flight_offer['price']['total'], depature_datetime.month,  depature_datetime.day, depature_datetime.weekday(), segment['departure']['iataCode'], segment['arrival']['iataCode'], segment['carrierCode'])
             flightNumber += 1
         ticketNumber += 1
     values = values[:-1]
 
+    # with open("big_data_dump.json", 'w', encoding='utf-8') as f:
+    #     json.dump(big_data, f, ensure_ascii=False, indent=4)
+
     client = bigquery.Client(project = "flightadvisor-379602")  # Setting client to correct projectID
 
     CREATE_TABLE_QUERY = (
-        """CREATE OR REPLACE TABLE flightadvisor-379602.flight_delays.big_data(
+        """CREATE OR REPLACE TABLE flightadvisor-379602.flight_delays.big_data2(
             flightNumber INT64,
             ticketNumber INT64,
             Price FLOAT64,
@@ -87,7 +100,7 @@ def getGroupedData(data):
             Dest STRING,
             IATA_Code_Operating_Airline STRING
         );
-        INSERT INTO flightadvisor-379602.flight_delays.big_data (
+        INSERT INTO flightadvisor-379602.flight_delays.big_data2 (
             flightNumber,
             ticketNumber,
             Price,
@@ -104,6 +117,7 @@ def getGroupedData(data):
 
     query_job = client.query(CREATE_TABLE_QUERY)  # API request
     success = query_job.result()
+    # print("galkdjflkasjdflkasdjflkjdflksajdflkjs\n\n\n")
     print(success)
 
     QUERY = (
@@ -113,7 +127,7 @@ def getGroupedData(data):
     flightNumber,
     ticketNumber
     FROM 
-    ML.PREDICT(MODEL `flightadvisor-379602.flight_delays.delay_predictions_4`, (
+    ML.PREDICT(MODEL `flightadvisor-379602.flight_delays.delay_predictions_5`, (
         SELECT
         Month,
         IATA_Code_Operating_Airline,
@@ -124,8 +138,8 @@ def getGroupedData(data):
         flightNumber,
         ticketNumber
         FROM
-        flightadvisor-379602.flight_delays.big_data
-    ), STRUCT(0.33 AS threshold))""")
+        flightadvisor-379602.flight_delays.big_data2
+    ), STRUCT(0.3044 AS threshold))""")
 
     # Perform a query.
     query_job = client.query(QUERY)  # API request
@@ -133,7 +147,18 @@ def getGroupedData(data):
     big_data.sort(key=lambda x: x['flightNumber'])
 
     for row in rows:
-        big_data[row.flightNumber]['predicted_Delayed'] = row.predicted_Delayed                                    
+        big_data[row.flightNumber]['predicted_Delayed_probs'] = row.predicted_Delayed_probs[0]['prob']       # Change to probabilities  ?????
+
+        if row.predicted_Delayed_probs[0]['prob'] < 0.30:
+            big_data[row.flightNumber]['predicted_Delayed_prob_status'] = 'Low'
+
+        elif row.predicted_Delayed_probs[0]['prob'] < 0.40: 
+            big_data[row.flightNumber]['predicted_Delayed_prob_status'] = 'Medium'
+
+        else:
+            big_data[row.flightNumber]['predicted_Delayed_prob_status'] = 'High'
+
+  
 
     grouped_big_data = defaultdict(list)
 
@@ -141,3 +166,5 @@ def getGroupedData(data):
         grouped_big_data[flight['ticketNumber']].append(flight)
         
     return grouped_big_data
+
+
