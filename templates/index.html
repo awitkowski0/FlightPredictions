@@ -111,24 +111,36 @@
       <table>
         <thead>
           <tr>
-            <th id="flightNumber">Flight Number</th>
-            <th>Ticket Number</th>
             <th>Price</th>
             <th>Origin</th>
+            <th>Departure</th>
             <th>Destination</th>
+            <th>Arrival</th>
             <th>Airline</th>
             <th id="delayed">Delayed</th>
           </tr>
         </thead>
         <tbody>
-          {% for ticket in ticket_data %}
+            
+        {% set ns = namespace(first = True) %}
+
+        {% for ticket in ticket_data %}
+          {% set ns.first = True %}
           {% for flight in ticket %}
           <tr class="ticket-row">
-            <td>{{ flight['flightNumber'] }}</td>
-            <td>{{ flight['ticketNumber'] }}</td>
-            <td>{{ flight['Price'] }}</td>
+
+            {% if ns.first == True %}
+                <td>{{ flight['Price'] }}</td>
+            {% endif %}
+            {% if ns.first == False %}
+                <td></td>
+            {% endif %}
+            {% set ns.first = False %}
+            
             <td>{{ flight['Origin'] }}</td>
+            <td>{{ flight['Origin_DateTime'] }}</td>
             <td>{{ flight['Dest'] }}</td>
+            <td>{{ flight['Dest_DateTime'] }}</td>
             <td>{{ flight['Airline'] }}</td>
 
             {% if  flight['predicted_Delayed_prob_status'] == 'Low' %}
@@ -146,7 +158,7 @@
           </tr>
           {% endfor %}
           <tr class="spacer-row"><td colspan="7"></td></tr>
-          {% endfor %}
+        {% endfor %}
         </tbody>
       </table>
     </div>

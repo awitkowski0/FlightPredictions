@@ -75,7 +75,9 @@ def getGroupedData(data):
                             'DayofMonth': depature_datetime.day, 
                             'DayOfWeek': depature_datetime.weekday(), 
                             'Origin': segment['departure']['iataCode'], 
-                            'Dest': segment['arrival']['iataCode'], 
+                            'Dest': segment['arrival']['iataCode'],
+                            'Origin_DateTime': segment['departure']['at'], 
+                            'Dest_DateTime': segment['arrival']['at'], 
                             'IATA_Code_Operating_Airline': segment['carrierCode'],
                             'Airline': airlines[segment['carrierCode']]})
             values += "(%s, %s, %s, %s, %s, %s, \"%s\", \"%s\", \"%s\")," % (flightNumber, ticketNumber, flight_offer['price']['total'], depature_datetime.month,  depature_datetime.day, depature_datetime.weekday(), segment['departure']['iataCode'], segment['arrival']['iataCode'], segment['carrierCode'])
