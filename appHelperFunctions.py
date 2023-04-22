@@ -160,6 +160,9 @@ def getGroupedData(data):
         else:
             big_data[row.flightNumber]['predicted_Delayed_prob_status'] = 'High'
 
+        big_data[row.flightNumber]['Origin_DateTime'] = big_data[row.flightNumber]['Origin_DateTime'].split("T")[0].split("-")[1] + "/" + big_data[row.flightNumber]['Origin_DateTime'].split("T")[0].split("-")[2] + " " + " @ " + " " + big_data[row.flightNumber]['Origin_DateTime'].split("T")[1]
+        big_data[row.flightNumber]['Dest_DateTime'] = big_data[row.flightNumber]['Dest_DateTime'].split("T")[0].split("-")[1] + "/" + big_data[row.flightNumber]['Dest_DateTime'].split("T")[0].split("-")[2] + " " + " @ " + " " + big_data[row.flightNumber]['Dest_DateTime'].split("T")[1]
+
   
 
     grouped_big_data = defaultdict(list)
