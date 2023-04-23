@@ -6,6 +6,10 @@ import json
 from datetime import datetime
 from collections import defaultdict
 import random
+import pytz
+
+airlines = None
+timezones = None
 
 def getTicketDataFromAPI(origin, dest, date, number_tickets):
     # amadeus = Client(client_id='GNEZjAg0tkEbPkWGGvvRteWxSBbSAXKU', client_secret='wYFTeSAIy0vAJIbq')
@@ -57,13 +61,30 @@ def getGroupedData(data):
     values = """"""
     flightNumber = 0
     ticketNumber = 0
-    f = open('airline_codes.json')
 
-    airline_codes = json.load(f)
-    airlines = {}
+    global airlines
+    if airlines is None:
+        f = open('airline_codes.json')
 
-    for airline in airline_codes:
-        airlines[airline['IATA_Code_Operating_Airline']] = airline['Airline']
+        airline_codes = json.load(f)
+        airlines = {}
+
+        for airline in airline_codes:
+            airlines[airline['IATA_Code_Operating_Airline']] = airline['Airline']
+
+        f.close()
+
+    global timezones
+    if timezones is None:
+        timezones_file = open('timezone_map.txt')
+
+        timezones = {}
+
+        for line in timezones_file:
+            parts = line.split("\t")
+            timezones[parts[0]] = parts[1].split("\n")[0]
+
+        timezones_file.close()
 
     for flight_offer in flight_api_data:
         for segment in flight_offer['itineraries'][0]['segments']:
@@ -79,7 +100,9 @@ def getGroupedData(data):
                             'Origin_DateTime': segment['departure']['at'], 
                             'Dest_DateTime': segment['arrival']['at'], 
                             'IATA_Code_Operating_Airline': segment['carrierCode'],
-                            'Airline': airlines[segment['carrierCode']]})
+                            'Airline': airlines[segment['carrierCode']],
+                            'Origin_Timezone': timezones[segment['departure']['iataCode']],
+                            'Dest_Timezone': timezones[segment['arrival']['iataCode']]})
             values += "(%s, %s, %s, %s, %s, %s, \"%s\", \"%s\", \"%s\")," % (flightNumber, ticketNumber, flight_offer['price']['total'], depature_datetime.month,  depature_datetime.day, depature_datetime.weekday(), segment['departure']['iataCode'], segment['arrival']['iataCode'], segment['carrierCode'])
             flightNumber += 1
         ticketNumber += 1
@@ -149,7 +172,7 @@ def getGroupedData(data):
     big_data.sort(key=lambda x: x['flightNumber'])
 
     for row in rows:
-        big_data[row.flightNumber]['predicted_Delayed_probs'] = row.predicted_Delayed_probs[0]['prob']       # Change to probabilities  ?????
+        big_data[row.flightNumber]['predicted_Delayed_probs'] = row.predicted_Delayed_probs[0]['prob']         # bucket the probabilities
 
         if row.predicted_Delayed_probs[0]['prob'] < 0.30:
             big_data[row.flightNumber]['predicted_Delayed_prob_status'] = 'Low'
@@ -160,10 +183,14 @@ def getGroupedData(data):
         else:
             big_data[row.flightNumber]['predicted_Delayed_prob_status'] = 'High'
 
-        big_data[row.flightNumber]['Origin_DateTime'] = big_data[row.flightNumber]['Origin_DateTime'].split("T")[0].split("-")[1] + "/" + big_data[row.flightNumber]['Origin_DateTime'].split("T")[0].split("-")[2] + " " + " @ " + " " + big_data[row.flightNumber]['Origin_DateTime'].split("T")[1]
-        big_data[row.flightNumber]['Dest_DateTime'] = big_data[row.flightNumber]['Dest_DateTime'].split("T")[0].split("-")[1] + "/" + big_data[row.flightNumber]['Dest_DateTime'].split("T")[0].split("-")[2] + " " + " @ " + " " + big_data[row.flightNumber]['Dest_DateTime'].split("T")[1]
+        origin_datetime = datetime.strptime(big_data[row.flightNumber]['Origin_DateTime'], "%Y-%m-%dT%H:%M:%S")
+        dest_datetime = datetime.strptime(big_data[row.flightNumber]['Dest_DateTime'], "%Y-%m-%dT%H:%M:%S")
+        
+        origin_datetime = origin_datetime.astimezone(pytz.timezone(big_data[row.flightNumber]['Origin_Timezone'])).strftime('%Y-%m-%d~%H:%M:%S %Z')
+        dest_datetime = dest_datetime.astimezone(pytz.timezone(big_data[row.flightNumber]['Dest_Timezone'])).strftime('%Y-%m-%d~%H:%M:%S %Z')
 
-  
+        big_data[row.flightNumber]['Origin_DateTime'] = origin_datetime.split("~")[0].split("-")[1] + "/" + origin_datetime.split("~")[0].split("-")[2] + " @ " + origin_datetime.split("~")[1]
+        big_data[row.flightNumber]['Dest_DateTime'] = dest_datetime.split("~")[0].split("-")[1] + "/" + dest_datetime.split("~")[0].split("-")[2] + " @ " + dest_datetime.split("~")[1]    
 
     grouped_big_data = defaultdict(list)
 

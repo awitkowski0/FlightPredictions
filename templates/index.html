@@ -62,13 +62,26 @@
         </form> -->
 
         <form action="/update/" method="post">
-            <input class="inputs" list="origins" name="origins" placeholder="Where from?" id="origin-search">
+            <!-- ORIGIN -->
+            {% if override_origin %}
+                <input class="inputs" list="origins" name="origins" placeholder="{{ override_origin }}" value="{{ override_origin }}"id="origin-search">
+            {% else %}
+                <input class="inputs" list="origins" name="origins" placeholder="Where from?" id="origin-search">
+            {% endif %}
             <datalist id="origins">
+                {% if override_origin %}
+                    <option value="selected">{{override_origin}}</option>
+                {% endif %}
                 {%for origin in drop_down_data%}
                 <option>{{origin}}</option>
                 {%endfor%}
             </datalist>
-            <input class="inputs" list="destinations" name="destinations" placeholder="Where to?" id="dest-search" required>
+            <!-- DESTINATION -->
+            {% if override_destination %}
+                <input class="inputs" list="destinations" name="destinations" placeholder="{{ override_destination }}" value="{{ override_destination}}" id="dest-search">
+            {% else %}
+                <input class="inputs" list="destinations" name="destinations" placeholder="Where to?" id="dest-search">
+            {% endif %}
             <datalist id="destinations">
                 {% if override_destination %}
                     <option value="selected">{{override_destination}}</option>
@@ -77,25 +90,27 @@
                 <option>{{dest}}</option>
                 {%endfor%}
             </datalist>
-            <input class="inputs" type="date" id="flight-date" name="flight-date">
-            <input class="inputs" type="number" placeholder="How many tickets?" id="quantity" name="quantity" min="1"
-                max="5">
-        
-            </input>
-            <button type="submit" id="search-button">
+            <!-- DATE -->
+            {% if override_date %}
+                <input class="inputs" type="date" id="flight-date" name="flight-date" value="{{ override_date }}" min="{{ today }}">
+            {% else %}
+                <input class="inputs" type="date" id="flight-date" name="flight-date" min="{{ today }}">
+            {% endif %}
+            <!-- TICKETS -->
+            {% if override_quantity %}
+                <input class="inputs" type="number" placeholder="{{ override_quantity }}" value= "{{ override_quantity }}" id="quantity" name="quantity" min="1" max="5"></input>
+            {% else %}
+                <input class="inputs" type="number" placeholder="How many tickets?" id="quantity" name="quantity" min="1" max="5"></input>
+            {% endif %}
+
+            <button type="submit" id="search-button" name="submission" value="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search"
                     viewBox="0 0 16 16">
                     <path
                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                 </svg>
             </button>
-
-            <!-- <input class = "inputs" type="date" id="flight-date" name="flight-date">
-                <input class = "inputs" type="number" placeholder="How many tickets?"id="quantity" name="quantity" min="1" max="5">
-                <input class = "inputs" type="submit" id="search-button"> -->
-    </form>
-        <form action="/random/" method="post">
-            <button type="submit" id="search-button" onclick="selectRandomCity()">
+            <button type="submit" id="search-button" name="submission" value="random">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
                     class="bi bi-dice-5-fill" viewBox="0 0 16 16">
                     <path

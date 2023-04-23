@@ -4,3 +4,4 @@ ptvsd==4.3.2 # Required for debugging.
 google==3.0.0
 google-cloud-bigquery
 amadeus==8.0.0
+pytz
