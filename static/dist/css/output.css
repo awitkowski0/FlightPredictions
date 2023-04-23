@@ -63,15 +63,24 @@ input {
 #tableContainer {
   display: flex;
   justify-content: center;
+  border-radius: 50px;
 }
 
 #flightNumber {
   border-top-left-radius: 19px;
 }
 
-#delayed {
+/* #delayed {
   border-top-right-radius: 19px;
 }
+
+#price {
+  border-top-left-radius: 19px;
+}
+
+#priceOutput {
+  border-top-left-radius: 19px;
+} */
 
   table {
     /* display: flex; */
@@ -101,10 +110,12 @@ input {
 
 .ticket + .ticket {
     margin-top: -20px;
+    border-radius: 50px;
 }
   
   .spacer-row td {
     height: 20px;
+    background-color: transparent;
   }
 
   th, td {
