@@ -20,11 +20,11 @@ def getTicketDataFromAPI(origin, dest, date, number_tickets):
         adults=number_tickets
     )
 
-    with open("last_query_result.json", 'w', encoding='utf-8') as f:
-        json.dump(response.data, f, ensure_ascii=False, indent=4)
+    # with open("last_query_result.json", 'w', encoding='utf-8') as f:
+    #     json.dump(response.data, f, ensure_ascii=False, indent=4)
 
-    with open("last_query_result_string.json", 'w', encoding='utf-8') as f:
-        f.write(response.body)
+    # with open("last_query_result_string.json", 'w', encoding='utf-8') as f:
+    #     f.write(response.body)
 
     res_1 = json.dumps(response.data)
     res = json.loads(res_1)
