@@ -12,28 +12,28 @@ airlines = None
 timezones = None
 
 def getTicketDataFromAPI(origin, dest, date, number_tickets):
-    # amadeus = Client(client_id='GNEZjAg0tkEbPkWGGvvRteWxSBbSAXKU', client_secret='wYFTeSAIy0vAJIbq')
-    # response = amadeus.shopping.flight_offers_search.get(
-    #     originLocationCode=origin,
-    #     destinationLocationCode=dest,
-    #     departureDate=date,
-    #     adults=number_tickets
-    # )
+    amadeus = Client(client_id='GNEZjAg0tkEbPkWGGvvRteWxSBbSAXKU', client_secret='wYFTeSAIy0vAJIbq')
+    response = amadeus.shopping.flight_offers_search.get(
+        originLocationCode=origin,
+        destinationLocationCode=dest,
+        departureDate=date,
+        adults=number_tickets
+    )
 
-    # with open("last_query_result.json", 'w', encoding='utf-8') as f:
-    #     json.dump(response.data, f, ensure_ascii=False, indent=4)
+    with open("last_query_result.json", 'w', encoding='utf-8') as f:
+        json.dump(response.data, f, ensure_ascii=False, indent=4)
 
-    # with open("last_query_result_string.json", 'w', encoding='utf-8') as f:
-    #     f.write(response.body)
+    with open("last_query_result_string.json", 'w', encoding='utf-8') as f:
+        f.write(response.body)
 
-    # res_1 = json.dumps(response.data)
-    # res = json.loads(res_1)
-    # return res
+    res_1 = json.dumps(response.data)
+    res = json.loads(res_1)
+    return res
     
-    f = open("last_query_result.json")
-    data = json.load(f)
-    f.close()
-    return data
+    # f = open("last_query_result.json")
+    # data = json.load(f)
+    # f.close()
+    # return data
 
 def getDropDownData():
     f = open('airport_codes_and_cities.json')
@@ -174,10 +174,10 @@ def getGroupedData(data):
     for row in rows:
         big_data[row.flightNumber]['predicted_Delayed_probs'] = row.predicted_Delayed_probs[0]['prob']         # bucket the probabilities
 
-        if row.predicted_Delayed_probs[0]['prob'] < 0.30:
+        if row.predicted_Delayed_probs[0]['prob'] < 0.275:
             big_data[row.flightNumber]['predicted_Delayed_prob_status'] = 'Low'
 
-        elif row.predicted_Delayed_probs[0]['prob'] < 0.40: 
+        elif row.predicted_Delayed_probs[0]['prob'] < 0.35: 
             big_data[row.flightNumber]['predicted_Delayed_prob_status'] = 'Medium'
 
         else:
