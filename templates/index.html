@@ -9,13 +9,28 @@
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+
+    <style>
+        .high{
+            color: #EF476F; 
+        }
+        
+        .medium{
+            color: #FFD166;     
+        }
+
+        .low{
+            color: #06D6A0; 
+        }
+    </style>
+
 </head>
 
-<body>  
+<body>
     <!-- !!!!!ANIMATED CLOUDS!!!!!
     <div id="clouds">
     <div class="cloud x1"></div> 
@@ -27,10 +42,10 @@
     </div> -->
 
     <div id="titleContainer">
-        <img id = "logo" src="/static/assets/logo.svg">
-    </div> 
+        <img id="logo" src="/static/assets/logo.svg">
+    </div>
 
-    <div id = "inputContainer">
+    <div id="inputContainer">
         <!-- <form>
             <div class="flex">
                 <input type="search" id="location-search"
@@ -47,68 +62,120 @@
         </form> -->
 
         <form action="/update/" method="post">
-            <input class = "inputs" list="origins" name="origins" placeholder = "Where from?" id="origin-search">
+            <!-- ORIGIN -->
+            {% if override_origin %}
+                <input class="inputs" list="origins" name="origins" placeholder="{{ override_origin }}" value="{{ override_origin }}"id="origin-search">
+            {% else %}
+                <input class="inputs" list="origins" name="origins" placeholder="Where from?" id="origin-search">
+            {% endif %}
             <datalist id="origins">
+                {% if override_origin %}
+                    <option value="selected">{{override_origin}}</option>
+                {% endif %}
                 {%for origin in drop_down_data%}
                 <option>{{origin}}</option>
                 {%endfor%}
             </datalist>
-            <input class = "inputs" list="destinations" name="destinations" placeholder="Where to?" id="dest-search"> 
+            <!-- DESTINATION -->
+            {% if override_destination %}
+                <input class="inputs" list="destinations" name="destinations" placeholder="{{ override_destination }}" value="{{ override_destination}}" id="dest-search">
+            {% else %}
+                <input class="inputs" list="destinations" name="destinations" placeholder="Where to?" id="dest-search">
+            {% endif %}
             <datalist id="destinations">
+                {% if override_destination %}
+                    <option value="selected">{{override_destination}}</option>
+                {% endif %}
                 {%for dest in drop_down_data%}
                 <option>{{dest}}</option>
                 {%endfor%}
             </datalist>
-                <input class="inputs" type="date" id="flight-date" name="flight-date">
-                <input class="inputs" type="number" placeholder="How many tickets?" id="quantity" name="quantity" min="1" max="5">
-                <button type="submit" id="search-button"><img src="/static/assets/button.jpg" alt="Search"></button>
+            <!-- DATE -->
+            {% if override_date %}
+                <input class="inputs" type="date" id="flight-date" name="flight-date" value="{{ override_date }}" min="{{ today }}">
+            {% else %}
+                <input class="inputs" type="date" id="flight-date" name="flight-date" min="{{ today }}">
+            {% endif %}
+            <!-- TICKETS -->
+            {% if override_quantity %}
+                <input class="inputs" type="number" placeholder="{{ override_quantity }}" value= "{{ override_quantity }}" id="quantity" name="quantity" min="1" max="5"></input>
+            {% else %}
+                <input class="inputs" type="number" placeholder="How many tickets?" id="quantity" name="quantity" min="1" max="5"></input>
+            {% endif %}
 
-            <!-- <input class = "inputs" type="date" id="flight-date" name="flight-date">
-                <input class = "inputs" type="number" placeholder="How many tickets?"id="quantity" name="quantity" min="1" max="5">
-                <input class = "inputs" type="submit" id="search-button"> -->
-            </div>
-        </form> 
-          
-          <!-- <div>
-            {%for ticket in ticket_data%}
-            <ul>
-                {%for flight in ticket%}
-                <li>{{"%s | %s |$%s | %s -> %s | %s | %s" % (flight['flightNumber'], flight['ticketNumber'], flight['Price'], flight['Origin'], flight['Dest'], flight['IATA_Code_Operating_Airline'], flight['predicted_Delayed'])}}</li>
-                {%endfor%}
+            <button type="submit" id="search-button" name="submission" value="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </button>
+            <button type="submit" id="search-button" name="submission" value="random">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                    class="bi bi-dice-5-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm2.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM12 13.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                </svg>
+            </button>
+        </form>
+    </div>
 
-            </ul>
-            {%endfor%}
-        </div> -->
+
     {% if ticket_data %}
-    <div id = "tableContainer">
-        <table>
-            <thead>
-              <tr>
-                <th id = "flightNumber">Flight Number</th>
-                <th>Ticket Number</th>
-                <th>Price</th>
-                <th>Origin</th>
-                <th>Destination</th>
-                <th>Airline</th>
-                <th id = "delayed">Delayed</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for ticket in ticket_data %}
-                {% for flight in ticket %}
-                  <tr>
-                    <td>{{ flight['flightNumber'] }}</td>
-                    <td>{{ flight['ticketNumber'] }}</td>
-                    <td>{{ flight['Price'] }}</td>
-                    <td>{{ flight['Origin'] }}</td>
-                    <td>{{ flight['Dest'] }}</td>
-                    <td>{{ flight['IATA_Code_Operating_Airline'] }}</td>
-                    <td>{{ flight['predicted_Delayed'] }}</td>
-                  </tr>
-                {% endfor %}
-              {% endfor %}
-            </tbody>
-        </table>
+    <div id="tableContainer">
+      <table>
+        <thead>
+          <tr>
+            <th>Price</th>
+            <th>Origin</th>
+            <th>Departure</th>
+            <th>Destination</th>
+            <th>Arrival</th>
+            <th>Airline</th>
+            <th id="delayed">Delayed</th>
+          </tr>
+        </thead>
+        <tbody>
+            
+        {% set ns = namespace(first = True) %}
+
+        {% for ticket in ticket_data %}
+          {% set ns.first = True %}
+          {% for flight in ticket %}
+          <tr class="ticket-row">
+
+            {% if ns.first == True %}
+                <td>{{ flight['Price'] }}</td>
+            {% endif %}
+            {% if ns.first == False %}
+                <td></td>
+            {% endif %}
+            {% set ns.first = False %}
+            
+            <td>{{ flight['Origin'] }}</td>
+            <td>{{ flight['Origin_DateTime'] }}</td>
+            <td>{{ flight['Dest'] }}</td>
+            <td>{{ flight['Dest_DateTime'] }}</td>
+            <td>{{ flight['Airline'] }}</td>
+
+            {% if  flight['predicted_Delayed_prob_status'] == 'Low' %}
+                <td class = "low">{{ flight['predicted_Delayed_prob_status'] }}</td>
+            {% endif %}
+
+            {% if  flight['predicted_Delayed_prob_status'] == 'Medium' %}
+                <td class = "medium">{{ flight['predicted_Delayed_prob_status'] }}</td>
+            {% endif %}
+
+            {% if  flight['predicted_Delayed_prob_status'] == 'High' %}
+                <td class = "high">{{ flight['predicted_Delayed_prob_status'] }}</td> 
+            {% endif %}
+ 
+          </tr>
+          {% endfor %}
+          <tr class="spacer-row"><td colspan="7"></td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
     </div>
     {% endif %}
 
@@ -135,3 +202,44 @@
 
 </body>
 </html>
+
+
+<!--!!seperated by ticket's wanted, in table w border-->
+            <!-- <tbody>
+              {% for ticket in ticket_data %}
+                 <div style = "border: 1px solid black; padding: 10px; margin-bottom: 20 px;">
+                    {% for flight in ticket %}
+                    <table>
+                    <tr>
+                        <td> Flight Number: </td>
+                        <td>{{ flight['flightNumber'] }}</td>
+                    </tr>
+                    <tr>
+                        <td> Ticket Numbers: </td>
+                        <td>{{ flight['ticketNumber'] }}</td>
+                    </tr>
+                    <tr>
+                        <td> Price: </td>
+                        <td>{{ flight['Price'] }}</td>
+                    </tr>
+                    <tr>
+                        <td> Origin: </td>
+                        <td>{{ flight['Origin'] }}</td>
+                    </tr>
+                    <tr>
+                        <td> Destination: </td>
+                        <td>{{ flight['Dest'] }}</td>
+                    </tr>
+                    <tr>
+                        <td> Operating Airline: </td>
+                        <td>{{ flight['IATA_Code_Operating_Airline'] }}</td>
+                    </tr>
+                    <tr>
+                        <td> Precited Delayed: </td>
+                        <td>{{ flight['predicted_Delayed_probs'] }}</td>
+                    </tr>
+                </table>
+                    {% endfor %}
+            </div> 
+              {% endfor %}
+            </tbody> -->
